@@ -4,7 +4,11 @@ TRAINING_MODE = 1
 INFERENCE_MODE = 2
 
 
-class Preprocessor(metaclass=ABCMeta):
+class AbstractProcessor(metaclass=ABCMeta):
+    representation = ''
+
+
+class Preprocessor(AbstractProcessor):
 
     @abstractmethod
     def load_original_data(self, **kwargs):
@@ -32,7 +36,7 @@ class Preprocessor(metaclass=ABCMeta):
         pass
 
 
-class ModelDesigner(metaclass=ABCMeta):
+class ModelDesigner(AbstractProcessor):
     model = None
 
     def __init__(self, **kwargs):
@@ -70,7 +74,7 @@ class ModelDesigner(metaclass=ABCMeta):
         pass
 
 
-class Trainer(metaclass=ABCMeta):
+class Trainer(AbstractProcessor):
 
     @abstractmethod
     def load_training_dataset(self, **kwargs):
@@ -93,7 +97,7 @@ class Trainer(metaclass=ABCMeta):
         pass
 
 
-class Evaluator(metaclass=ABCMeta):
+class Evaluator(AbstractProcessor):
     @abstractmethod
     def __repr__(self):
         pass
