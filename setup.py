@@ -3,7 +3,7 @@ import os
 
 setup(  name='AIFactoryDS',
 
-        version='0.1.7',
+        version='0.1.8',
 
         description='Project Skeleton',
 
