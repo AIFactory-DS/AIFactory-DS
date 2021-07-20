@@ -4,11 +4,11 @@ TRAINING_MODE = 1
 INFERENCE_MODE = 2
 
 
-class AbstractProcessor(metaclass=ABCMeta):
+class AbstractProcessor:
     representation = ''
 
 
-class Preprocessor(AbstractProcessor):
+class Preprocessor(AbstractProcessor, metaclass=ABCMeta):
 
     @abstractmethod
     def load_original_data(self, **kwargs):
