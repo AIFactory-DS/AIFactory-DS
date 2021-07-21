@@ -3,6 +3,7 @@ __all__ = ['AbstractProcesses',
            'ModelDesigner',
            'Trainer',
            'Evaluator',
-           'Worker']
+           'Worker',
+           'ImageUtilities']
 
-from AIFactoryDS.AbstractProcesses import Preprocessor, ModelDesigner, Trainer, Evaluator
+from AbstractProcesses import Preprocessor, ModelDesigner, Trainer, Evaluator

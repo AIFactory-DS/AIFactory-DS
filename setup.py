@@ -3,7 +3,7 @@ import os
 
 setup(  name='AIFactoryDS',
 
-        version='0.1.8',
+        version='0.1.11',
 
         description='Project Skeleton',
 
@@ -15,7 +15,7 @@ setup(  name='AIFactoryDS',
 
         license='MIT',
 
-        py_modules=['greetings', 'AbstractProcesses'],
+        py_modules=['greetings', 'AbstractProcesses', 'Worker', 'ImageUtilities'],
 
         python_requires='>=3.8',
 
@@ -26,6 +26,8 @@ setup(  name='AIFactoryDS',
         scripts=['build_project_skeleton'],
 
         include_package_data=True,
+
+        package_dir={'': "src"},
 
         package_data={'training': ['formats/training_recipe_format.json']}
 )
