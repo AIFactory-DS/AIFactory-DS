@@ -19,7 +19,7 @@ class SamplePreprocessor(Preprocessor):
         return self.representation
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     s = SamplePreprocessor()
     print(s)
     del s
