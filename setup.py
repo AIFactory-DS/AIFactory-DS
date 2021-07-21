@@ -3,9 +3,9 @@ import os
 
 setup(  name='AIFactoryDS',
 
-        version='0.1.11',
+        version='0.1.13',
 
-        description='Project Skeleton',
+        description='AI Project Skeleton and Utilities',
 
         author='yoosunyoung',
 
@@ -19,15 +19,16 @@ setup(  name='AIFactoryDS',
 
         python_requires='>=3.8',
 
-        install_requires=[],
+        install_requires=['numpy~=1.21.1'],
 
-        packages=['EasterEggs', 'AIFactoryDS'],
+        package_dir={'': "src/"},
 
-        scripts=['build_project_skeleton'],
+        packages=find_packages('src'),
+
+        scripts=['bin/build_project_skeleton'],
 
         include_package_data=True,
 
-        package_dir={'': "src"},
 
         package_data={'training': ['formats/training_recipe_format.json']}
 )
