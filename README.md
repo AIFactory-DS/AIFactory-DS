@@ -35,3 +35,20 @@ python setup.py bdist_wheel
 # {VERSION} should be set as the same tag that was specified in `setup.py`
 twine upload dist/AIFactoryDS-{VERSION}.whl 
 ```
+
+### Project Structure
+```
+├── bin: executable scripts
+├── documents
+├── env: requirements
+├── formats: sample formats for recipes
+└── src: all python source code of the project
+```
+
+After you build the package, the directories below will be created.
+Please add the directories in the `.git/info/exclude` file.
+```
+├── AIFactoryDS.egg-info
+├── build
+└── dist: contains .whl files
+```

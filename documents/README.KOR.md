@@ -33,3 +33,19 @@ python setup.py bdist_wheel
 # {VERSION} should be set as the same tag that was specified in `setup.py`
 twine upload dist/AIFactoryDS-{VERSION}.whl 
 ```
+
+### 프로젝트 구조
+```
+├── bin: 실행가능한 스크립트
+├── documents
+├── env: 환경관련 명세서
+├── formats: 레시피 및 포맷 예시 파일
+└── src: 모든 파이썬 소스코드
+```
+
+빌드 하고 난 후에는 아래 디렉토리들이 추가 되니 개발 편의를 위해 `.git/info/exclude`에 해당 디렉토리들을 추가할 것. 
+```
+├── AIFactoryDS.egg-info
+├── build: 빌드된 파이썬 패키지
+└── dist: .whl 파일이 저장된 디렉토리
+```
